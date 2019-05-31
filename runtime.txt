@@ -1,0 +1,103 @@
+AU-DMeta
+s3://ewe-catalyst-prod/ccai/TA/input/featurized_data/V1/training/ctr_cpc/AU-DMeta/
+Function:loadDFFromParquet takes 6.79096412659s.
+NA summary for noNullFeatures!
+droping NA is done!
++-----------+
+|audience_id|
++-----------+
+|          0|
++-----------+
+Function:featurize takes 200.687484026s.
+['clicked_los', 'display_rank', 'audience_id']
+clicked_los
+display_rank
+
+Completed 144 Bytes/144 Bytes (1.2 KiB/s) with 1 file(s) remaining
+upload: ./categorical_feature_top_values to s3://ewe-catalyst-prod/ccai/TA/input/cpc/V1/AU-DMeta/2018-10-14/categorical_feature_top_values
+Function:reduce_cardinality takes 235.469506025s.
+
+Completed 2.6 KiB/2.6 KiB (23.9 KiB/s) with 1 file(s) remaining
+upload: ./numerical_feature_mean_values to s3://ewe-catalyst-prod/ccai/TA/input/cpc/V1/AU-DMeta/2018-10-14/numerical_feature_mean_values
+Function:fill_with_mean takes 86.2231121063s.
+Above polyexpansion, it takes 738.164923906
+Function:encoder takes 1061.36652994s.
+Function:ts_train_test_split takes 0.104110956192s.
+start training for LinearRegression
+training is done for LinearRegression
+Function:model_training takes 1804.62471485s.
+******************************* Training Error *******************************
++------------------+-----+
+|        prediction|label|
++------------------+-----+
+|1.8294906596619087|  2.0|
+|0.7906352620193899|  0.8|
+|0.7906352620193899|  0.8|
+|0.7906352620193899|  0.8|
+|1.5226650810409668| 2.22|
++------------------+-----+
+only showing top 5 rows
+R-Squared (R2) on test data =  for LinearRegression = 0.513372007676
+Root Mean Squared Error (RMSE) on test data for LinearRegression = 0.423516595559
+Function:accuracy_metrics takes 831.94840312s.
+******************************* Test Error *******************************
++------------------+-----+
+|        prediction|label|
++------------------+-----+
+| 1.254875139569888|  1.4|
+|0.5938903122804939|  0.7|
+|1.6128771922703644| 1.75|
+|1.4339043786543713|  2.0|
+|0.5680365688064946| 0.42|
++------------------+-----+
+only showing top 5 rows
+R-Squared (R2) on test data =  for LinearRegression = 0.554111929673
+Root Mean Squared Error (RMSE) on test data for LinearRegression = 0.369946391029
+Function:accuracy_metrics takes 438.254414082s.
+
+
+
+csv Took 1 hrs 14 min 25 sec
+
+parquet Took 50 min 13 sec
+
+
+
+
+AU-DMeta
+s3://ewe-catalyst-prod/ccai/TA/input/featurized_data/V1/training/ctr_cpc/AU-DMeta/
+Function:loadDFFromParquet takes 4.64242196083s.
+NA summary for noNullFeatures!
+droping NA is done!
++-----------+
+|audience_id|
++-----------+
+|          0|
++-----------+
+Function:featurize takes 224.556726933s.
+['clicked_los', 'display_rank', 'audience_id']
+  clicked_los    count
+0           1  1869220
+1           2   375766
+2           3   317476
+3           4   224384
+4           7   168558
+clicked_los
+  display_rank    count
+0          4.0  2424276
+1          3.0   489470
+2          2.0   375126
+3          1.0   154668
+display_rank
+  audience_id    count
+0           0  3443540
+
+Completed 144 Bytes/144 Bytes (862 Bytes/s) with 1 file(s) remaining
+upload: ./categorical_feature_top_values to s3://ewe-catalyst-prod/ccai/TA/input/cpc/V1/AU-DMeta/2018-10-14/categorical_feature_top_values
+Function:reduce_cardinality takes 331.027599096s.
+
+Completed 2.6 KiB/2.6 KiB (31.6 KiB/s) with 1 file(s) remaining
+upload: ./numerical_feature_mean_values to s3://ewe-catalyst-prod/ccai/TA/input/cpc/V1/AU-DMeta/2018-10-14/numerical_feature_mean_values
+Function:fill_with_mean takes 67.6488420963s.
+Above polyexpansion, it takes 533.055639982
+Function:encoder takes 933.305552959s.
